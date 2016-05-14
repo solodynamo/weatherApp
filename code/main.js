@@ -6,15 +6,24 @@ var humidity;
 var wind;
 var direction;
 
-window.onload=function()
-{
-    temp=document.getElementsByClassName("temperature");
+//window.onload=function()
+//{
+    /*temp=document.getElementsByClassName("temperature");
     loc=document.getElementsByClassName("location");
     icon=document.getElementsByClassName("climate_bg");
     humidity=document.getElementsByClassName("humidity");
     wind=document.getElementsByClassName("windspeed");
-    direction=document.getElementsByClassName("direction");
+    direction=document.getElementsByClassName("direction");*/
 
+
+
+
+
+//}
+
+$(document).ready(function(){
+
+    //setTimeout(getweather,10000);
     var weather={};
 
 
@@ -27,16 +36,15 @@ window.onload=function()
 
     update(weather);
 
-
-
-}
+})
 
 function update(weather)
 {
-    wind.value=weather.wind;
-    direction.value=weather.direction;
-    humidity.value=humidity.direction;
-    loc.value=weather.loc;
-    temp.value=weather.temp;
-    icon.src="images/"+weather.icon+"svg";
+    //$(".windspeed").value=weather.wind;
+       $(".windspeed").html()='45 km/h';
+    $(".direction").value='n';
+    $(".humidity").value='45%';
+    $(".location").value='delhi';
+$(".temperature").value='46';
+    $(".climate_bg").src="images/"+weather.icon+"svg";
 }
