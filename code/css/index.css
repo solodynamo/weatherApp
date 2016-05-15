@@ -97,9 +97,9 @@
 .location {
   position: absolute;
   top: 128px;
-  left: 63px;
+  left: 35px;
   z-index: 8;
-  width: 108px;
+  width: 200px;
   min-height: 59px;
   font-size: 1.313em;
   font-weight: 400;
@@ -110,12 +110,12 @@
 
 .temperature {
   position: absolute;
-  top: 38px;
-  left: 72px;
+  top: 55px;
+  left: 50px;
   z-index: 7;
   width: 109px;
   min-height: 28px;
-  font-size: 4.25em;
+  font-size: 2.25em;
   font-weight: 700;
   line-height: 1.38;
   color: rgb(255, 255, 255);
@@ -134,7 +134,7 @@
 
 .windspeed {
   position: absolute;
-  top: 9px;
+  top: 18px;
   left: 109px;
   width: 50px;
   min-height: 29px;
