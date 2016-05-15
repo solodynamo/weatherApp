@@ -41,10 +41,10 @@ $(document).ready(function(){
 function update(weather)
 {
     //$(".windspeed").value=weather.wind;
-       $(".windspeed").html()='45 km/h';
-    $(".direction").value='n';
-    $(".humidity").value='45%';
-    $(".location").value='delhi';
-$(".temperature").value='46';
+       $(".windspeed").append('<p>45 km/h</p>');
+    $(".direction").append('<p>n</p>');
+    $(".humidity").append('<p>45%</p>');
+    $(".location").append('<p>delhi</p>');
+$(".temperature").append('<p>46&deg</p>');
     $(".climate_bg").src="images/"+weather.icon+"svg";
 }
