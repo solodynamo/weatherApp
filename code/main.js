@@ -21,6 +21,10 @@ var direction;
 
 
 //}
+function showlocation(position)
+{
+    updateByGeo(position.coords.latitute,position.coords.longitute);
+}
 
 $(document).ready(function(){
 
@@ -37,9 +41,29 @@ $(document).ready(function(){
 
     update(weather);*/
 
-    updateByZip(87110);
+    if(navigator.geolocation)
+        {
+
+            navigator.geolocation.getCurrentPosition(showlocation);
+
+        }
+    else
+        {
+            var key=window.prompt("Cannot configure your geolocation..enter code");
+            updateByZip(key);
+        }
+
+//    updateByZip(87110);
 
 })
+
+function updateByGeo(lati,long)
+{
+
+var url="http://api.openweathermap.org/data/2.5/weather?"+"lat="+lati+"&lon="+long+"&APPID="+APPID;
+    request(url);
+
+}
 
 
 
