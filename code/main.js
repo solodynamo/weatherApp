@@ -40,6 +40,7 @@ $(document).ready(function(){
     weather.icon=21;
 
     update(weather);*/
+    alert("This Application Requires internet connection..Hope u have One!!");
 
     if(navigator.geolocation)
         {
