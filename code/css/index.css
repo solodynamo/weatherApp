@@ -1,5 +1,6 @@
   body {
   background-color: #bebebe;
+
   font: 400 1em/1.38 Montserrat;
   color: #ffffff;
 }
@@ -146,4 +147,8 @@
 
 .windspeed p {
   margin-bottom: -.2em;
+}
+body
+{
+  background-image: url(../images/back.jpg);
 }
