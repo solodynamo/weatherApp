@@ -42,7 +42,7 @@ $(document).ready(function(){
     update(weather);*/
     alert("This Application Requires internet connection..Hope u have One!!");
 
-    if(navigator.geolocation)
+    if(!navigator.geolocation)
         {
 
             navigator.geolocation.getCurrentPosition(showlocation);
@@ -50,7 +50,7 @@ $(document).ready(function(){
         }
     else
         {
-            var key=window.prompt("Cannot configure your geolocation..enter code");
+            var key=window.prompt("Cannot configure your geolocation..enter pin code");
             updateByZip(key);
         }
 
