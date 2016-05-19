@@ -141,6 +141,7 @@ $("#fah").click( function()
 {
 
     $(".temperature").text(Math.round(temper)+"(kel)");
+    $( "#fah" ).slideUp();
 
 
 });});
