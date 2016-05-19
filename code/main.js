@@ -78,7 +78,8 @@ function updateByZip(zip)
     request(url);
 
 }
-
+var weather={};
+var temper;
 
 function request(url)
 {
@@ -90,7 +91,7 @@ function request(url)
      if(xmlHttp.readyState==4 && xmlHttp.status==200)
          {
              var weatherData=JSON.parse(xmlHttp.responseText);
-             var weather={};
+
 
             console.log("in btw the request()"); weather.humidity=weatherData.main.humidity;
              weather.icon=weatherData.weather[0].id;
@@ -98,6 +99,7 @@ function request(url)
              weather.direction=weatherData.wind.deg;
              weather.location=weatherData.name;
              weather.temp=weatherData.main.temp;
+             temper=weatherData.main.temp;
              console.log(weather.direction);
              console.log("hello");
 
@@ -129,3 +131,12 @@ $(".temperature").append(Math.round(weather.temp-273)+"(deg)");
     $(".climate_bg").attr("src","imgs/codes"+weather.icon+"png");
 
 }
+$(document).ready(function(){
+$("#fah").click( function()
+
+{
+
+    $(".temperature").text(Math.round(temper)+"(kel)");
+
+
+});});
