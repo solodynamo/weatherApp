@@ -80,6 +80,7 @@ function updateByZip(zip)
 }
 var weather={};
 var temper;
+var weatherData;
 
 function request(url)
 {
@@ -90,7 +91,7 @@ function request(url)
  {
      if(xmlHttp.readyState==4 && xmlHttp.status==200)
          {
-             var weatherData=JSON.parse(xmlHttp.responseText);
+              weatherData=JSON.parse(xmlHttp.responseText);
 
 
             console.log("in btw the request()"); weather.humidity=weatherData.main.humidity;
@@ -128,7 +129,10 @@ function update(weather)
     $(".humidity").append(weather.humidity);
     $(".location").append(weather.location);
 $(".temperature").append(Math.round(weather.temp-273)+"(deg)");
-    $(".climate_bg").attr("src","imgs/codes"+weather.icon+"png");
+    $("#main").attr("src","images/"+weather.icon+".png");
+   // $(".climate_bg").attr("src", "http://openweathermap.org/img/w/"
+  //            + weatherData.weather[0].icon  + //".png");
+    console.log(weather.icon);
 
 }
 $(document).ready(function(){
