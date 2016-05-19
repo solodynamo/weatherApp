@@ -93,6 +93,7 @@ function request(url)
              var weather={};
 
             console.log("in btw the request()"); weather.humidity=weatherData.main.humidity;
+             weather.icon=weatherData.weather[0].id;
              weather.windspeed=weatherData.wind.speed;
              weather.direction=weatherData.wind.deg;
              weather.location=weatherData.name;
@@ -124,7 +125,7 @@ function update(weather)
     $(".direction").append(weather.direction);
     $(".humidity").append(weather.humidity);
     $(".location").append(weather.location);
-$(".temperature").append(weather.temp);
-    $(".climate_bg").src="images/"+weather.icon+"svg";
+$(".temperature").append(Math.round(weather.temp-273)+"(deg)");
+    $(".climate_bg").attr("src","imgs/codes"+weather.icon+"png");
 
 }

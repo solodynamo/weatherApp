@@ -152,3 +152,46 @@ body
 {
   background-image: url(../images/back.jpg);
 }
+#fah
+  {
+    padding-top:250px;
+
+  border-bottom-width: thin;
+
+
+
+
+    margin: 200px 200px 20px 2px;
+    padding: 20px 20px 20px 20px;
+    background:blue;
+    margin-right: 500px;
+    position:relative;
+    right:85px;
+
+
+
+  }
+
+#dropRef {
+	padding:20px 20px 20px 20px;
+  position:relative;
+  bottom:630px;
+
+  right:550px;
+
+
+
+
+
+
+
+}
+
+
+#windRef {
+	padding:20px 20px 20px 20px;
+  position:relative;
+  bottom:840px;
+
+  left:350px;
+}
